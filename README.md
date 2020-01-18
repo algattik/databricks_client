@@ -2,7 +2,15 @@
 
 ## About
 
-A REST client for Databricks.
+A REST client for the [Databricks REST API](https://docs.databricks.com/dev-tools/api/latest/index.html).
+
+This module is a thin layer allowing to build HTTP [Requests](https://requests.readthedocs.io/en/master/).
+It does not expose API operations as distinct methods, but rather exposes generic methods allowing
+to build API calls.
+
+The Databricks API sometimes returns 200 error codes and HTML content when the request is not
+properly authenticated. The client intercepts such occurrences (detecting non-JSON returned content)
+and wraps them into an exception.
 
 _This open-source project is not developed by nor affiliated with Databricks._
 
