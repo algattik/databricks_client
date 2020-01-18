@@ -1,0 +1,1 @@
+flake8 && TENANT_ID=xxx CLIENT_ID=xxx CLIENT_SECRET=xxx  DATABRICKS_HOST=https://northeurope.azuredatabricks.net/api/2.0 DATABRICKS_RG=xxx DATABRICKS_WORKSPACE=xxx pytest && python setup.py sdist bdist_wheel && twine check dist/* && twine upload dist/*
